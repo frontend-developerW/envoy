@@ -1,46 +1,47 @@
+import Link from "next/link";
 import React from "react";
 
 function Footer({ t }) {
   return (
     <div className="grid md:grid-cols-[2fr,2fr,1fr,2fr]">
       <div className="flex flex-col gap-[15px] justify-start">
-        <a href="#">{t["create_tarif_1"]}</a>
-        <a href="#">{t["create_tarif_2"]}</a>
-        <a href="#">{t["create_tarif_3"]}</a>
+        <Link href="/residental">{t["create_tarif_1"]}</Link>
+        <Link href="/monitoring">{t["create_tarif_2"]}</Link>
+        <Link href="/">{t["create_tarif_3"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
-        <a href="#">{t["proxy_usage"]}</a>
-        <a href="#">{t["countries"]}</a>
-        <a href="#">{t["prices"]}</a>
-        <a href="#">{t["help"]}</a>
-        <a href="#">{t["blog"]}</a>
-        <a href="#">{t["refferal_title"]}</a>
+        <Link href="#">{t["proxy_usage"]}</Link>
+        <Link href="/countries">{t["countries"]}</Link>
+        <Link href="/tarif_plans">{t["prices"]}</Link>
+        <Link href="/help">{t["help"]}</Link>
+        <Link href="/blog">{t["blog"]}</Link>
+        <Link href="#">{t["refferal_title"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
-        <a href="#">{t["chatbot"]}</a>
-        <a href="#">{t["feedback_contact"]}</a>
+        <Link href="/">{t["chatbot"]}</Link>
+        <Link href="/contact">{t["feedback_contact"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
-        <a href="#">{t["social"]}</a>
+        <Link href="#">{t["social"]}</Link>
         <div className="flex items-center gap-[10px]">
-          <a href="#">
+          <Link href="#">
             <img src="/telegram.svg" className="h-[30px]" alt="" />
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="#">
             <img src="/youtube.svg" className="h-[30px]" alt="" />
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="#">
             <img src="/vk.svg" className="h-[30px]" alt="" />
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="#">
             <img src="/4star.svg" className="h-[30px]" alt="" />
-          </a>
+          </Link>
         </div>
-        <a href="#">{t["policy"]}</a>
-        <a href="#">{t["termsofuse"]}</a>
-        <a href="#">{t["policy_file"]}</a>
-        <a href="#">{t["policy_cancel"]}</a>
-        <a href="#">{t["policy_agree"]}</a>
+        <Link href="/privacy">{t["policy"]}</Link>
+        <Link href="/terms">{t["termsofuse"]}</Link>
+        <Link href="/cookie">{t["policy_file"]}</Link>
+        <Link href="/cancellation">{t["policy_cancel"]}</Link>
+        <Link href="/agreement">{t["policy_agree"]}</Link>
       </div>
     </div>
   );

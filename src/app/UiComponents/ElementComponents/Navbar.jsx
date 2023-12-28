@@ -45,11 +45,11 @@ function Navbar({ t }) {
               </Link>
             </li>
             <li>
-              <div class="dropdown">
+              <div className="dropdown">
                 <Link href="/residental" className="dropdown-button">
                   {t["residential"]}
                 </Link>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                   <Link href="/monitoring">{t["popular_1"]}</Link>
                 </div>
               </div>

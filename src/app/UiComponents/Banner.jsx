@@ -1,5 +1,6 @@
 import React from "react";
 import { clients_logo } from "./components/constatns.js";
+import Link from "next/link.js";
 
 function Banner({ t }) {
   return (
@@ -12,9 +13,11 @@ function Banner({ t }) {
           <p className="md:text-[24px] text-[20px] leading-[22px] text-[#676D7E] mb-4">
             {t["banner_title"]}
           </p>
-          <button className="bg-black text-white rounded-[30px] px-[20px] py-[10px] mt-[20px]">
-            {t["try_free"]}
-          </button>
+          <Link href={'/register'}>
+            <button className="bg-black text-white rounded-[30px] px-[20px] py-[10px] mt-[20px]">
+              {t["try_free"]}
+            </button>
+          </Link>
           <img
             src="/banner_logo.png"
             alt=""
