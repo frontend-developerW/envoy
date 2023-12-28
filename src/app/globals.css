@@ -1,27 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Inter', sans-serif;
+  border: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.outliners {
+  background-color: #fff;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  white-space: nowrap;
+  /* font-size: 20px; */
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  min-width: 70%;
+  color: #000;
 }
+
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #F3F7FE;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 20px 0px;
+}
+
+.input_range {
+  position: relative;
+  width: 70%;
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+.input_range input {
+  width: 95%;
+  height: 1px;
+  -webkit-appearance: none;
+  background-color: #fff;
+  outliners: none;
+  border-radius: 10px;
+  border: .5px solid #00000085;
+  bottom: 0;
+  position: absolute;
+}
+
+.input_range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 23px;
+  height: 23px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #00000085;
+  cursor: pointer;
+}
+
+.create_map {
+  background-color: #FBFBFC;
+  background-image: url('/map.png');
+}
+
+.border-b-custom {
+  border-bottom: 1px solid #0000003b;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
+
+  .outliners {
+    padding: 10px;
+  }
+
+  .create_tariff .flex-col .outliners {
+    text-transform: none !important;
+  }
+
+  .create_map {
+    background-size: cover;
+    background-position: center;
+  }
 }
