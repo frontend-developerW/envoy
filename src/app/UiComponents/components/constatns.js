@@ -274,7 +274,7 @@ export const faq_examples = [
 export const countries = [
     {
         ru: [
-            "Северная Америка",
+            // "Северная Америка",
             "Ангилья",
             "Белиз",
             "Куба",
@@ -316,7 +316,7 @@ export const countries = [
             "Острова Теркс и Кайкос"
         ],
         en: [
-            "North America",
+            // "North America",
             "Anguilla",
             "Belize",
             "Cuba",
@@ -360,7 +360,7 @@ export const countries = [
     },
     {
         ru: [
-            "Южная Америка",
+            // "Южная Америка",
             "Аргентина",
             "Эквадор",
             "Парагвай",
@@ -377,7 +377,7 @@ export const countries = [
             "Монтсеррат"
         ],
         en: [
-            "South America",
+            // "South America",
             "Argentina",
             "Ecuador",
             "Paraguay",
@@ -396,7 +396,7 @@ export const countries = [
     },
     {
         ru: [
-            "Европа",
+            // "Европа",
             "Аландские острова",
             "Бельгия",
             "Чехия",
@@ -450,7 +450,7 @@ export const countries = [
             "Турция"
         ],
         en: [
-            "Europe",
+            // "Europe",
             "Åland Islands",
             "Belgium",
             "Czech Republic",
@@ -507,7 +507,7 @@ export const countries = [
     },
     {
         ru: [
-            "Азия и Ближний Восток",
+            // "Азия и Ближний Восток",
             "Афганистан",
             "Бутан",
             "Гонконг",
@@ -555,7 +555,7 @@ export const countries = [
             "Туркменистан"
         ],
         en: [
-            "Asia and the Middle East",
+            // "Asia and the Middle East",
             "Afghanistan",
             "Bhutan",
             "Hong Kong",

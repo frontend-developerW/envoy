@@ -85,14 +85,14 @@ function Navbar({ t }) {
               </div> */}
               {currentLocale === "ru" ? (
                 <button onClick={() => dispatch(toEng())}>
-                  <img src="/en.png" alt="" />
+                  <img className="w-[25px] rounded-full" src="/en.png" alt="" />
                 </button>
               ) : (
                 <button
                   className="dropdown-button"
                   onClick={() => dispatch(toRus())}
                 >
-                  <img src="/ru.png" alt="" />
+                  <img className="w-[25px] rounded-full" src="/ru.png" alt="" />
                 </button>
               )}
             </li>

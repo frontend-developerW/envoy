@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { globalCn }  from "./components/constatns.js";
+import { globalCn } from "./components/constatns.js";
 
 function GlobalProxy({ t }) {
   return (
@@ -11,7 +11,9 @@ function GlobalProxy({ t }) {
         <p className="text-[#fff] text-[20px] my-[20px]">
           {t["global_p_subtitle"]}
         </p>
-        <button className="outliners mt-4">{t["start_now"]}</button>
+        <Link href={"/register"}>
+          <button className="outliners mt-4">{t["start_now"]}</button>
+        </Link>
       </div>
       <div className="create_map grid md:grid-cols-3 md:gap-4 gap-8 p-8 py-16">
         {globalCn.map((item, index) => (
@@ -24,10 +26,12 @@ function GlobalProxy({ t }) {
           </div>
         ))}
         <div className="proxy_item flex items-center gap-2">
-          <img src={'/world.svg'} alt="" />
+          <img src={"/world.svg"} alt="" />
           <div className="column">
-            <p className="text-sm">+ 190 {t['countries']}</p>
-            <Link href='/proxy-countries' className="text-sm">{t["see_all_location"]}</Link>
+            <p className="text-sm">+ 190 {t["countries"]}</p>
+            <Link href="/proxy-countries" className="text-sm">
+              {t["see_all_location"]}
+            </Link>
           </div>
         </div>
       </div>

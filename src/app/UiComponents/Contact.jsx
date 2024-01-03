@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Contact({ t }) {
@@ -30,12 +31,11 @@ function Contact({ t }) {
         <h1 className="text-white md:text-right text-[24px] font-[700] mb-[30px]">
           {t["proxy_server"]}
         </h1>
-        <a
-          href="#"
+        <Link href={"/register"}
           className="bg-black text-white rounded-[30px] px-[20px] py-[10px] mb-[30px]"
         >
           {t["start_now"]}
-        </a>
+        </Link>
         <p className="text-white text-[16px] mb-[20px]">{t["left_question"]}</p>
         <button className="bg-white text-black border border-solid rounded-[30px] px-[20px] py-[10px] flex items-center gap-[10px]">
           <p>Telegram</p>

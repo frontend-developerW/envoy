@@ -170,5 +170,9 @@ export const en = {
   agree_policy: "By registering, you automatically agree on our Privacy Policy",
   p_p: "Privacy Policy",
   see_all_location: "See other locations",
+  north_america: "North America",
+  south_america: "South America",
+  europe: "Europe",
+  asia: "Asia and the Middle East",
   more1500: "More than 15000 clients around the world put there trust in us."
 }

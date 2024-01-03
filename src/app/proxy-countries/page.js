@@ -7,6 +7,7 @@ import Contact from '../UiComponents/Contact'
 import Footer from '../UiComponents/ElementComponents/Footer'
 import Navbar from '../UiComponents/ElementComponents/Navbar'
 import ProxyCountries from '../UiComponents/ProxyCountries'
+import DynamicBanner from '../UiComponents/DynamicBanner'
 
 const Monitoring = () => {
     const t = useSelector((state) => state.counter.value)
@@ -15,7 +16,7 @@ const Monitoring = () => {
         <div className='container'>
             <main>
                 <Navbar t={t} />
-                <Banner t={t} />
+                <DynamicBanner t={t} />
                 <ProxyCountries t={t} />
                 <Tariffs t={t} />
                 <Contact t={t} />

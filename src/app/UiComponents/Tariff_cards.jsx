@@ -1,29 +1,28 @@
 "use client";
 import React, { useState } from "react";
 import Card from "./ElementComponents/Card";
-import { tariff_cards }  from "./components/constatns.js";
+import { tariff_cards } from "./components/constatns.js";
 import RangeInput from "./ElementComponents/InputRange";
 
 function Tariff_cards({ t }) {
-  const frist_card = tariff_cards[1];
+  // const frist_card = tariff_cards[1];
   const [active, setActive] = useState(0);
   return (
     <>
       <div className="grid md:grid-cols-3 p-2 bg-[#F2F4F6] md:w-[50%] w-[80%] m-[auto] my-[70px]">
         {[0, 1, 2].map((item, i) => (
           <button
-          key={i}
+            key={i}
             onClick={() => setActive(item)}
             className={`p-[10px] rounded-[8px] ${active == item && "bg-white"}`}
           >
-            {t[`create_tarif_${item +1}`]}
+            {t[`create_tarif_${item + 1}`]}
           </button>
         ))}
-        
       </div>
       <div className="tariff_cards grid md:grid-cols-3 md:gap-[32px] gap-4 grid-cols-1 md:w-[65%] m-auto">
         {tariff_cards[active].map((card, index) => (
-          <Card key={index} {...card} t={t}/>
+          <Card key={index} {...card} t={t} />
         ))}
       </div>
       <div className="create_tariff grid md:grid-cols-3 gap-4 my-[100px] bg-white rounded-[12px] border-solid border overflow-hidden">
@@ -49,7 +48,21 @@ function Tariff_cards({ t }) {
           <RangeInput gb={t["gb"]} />
         </div>
         <div className="p-8 px-10">
-          <Card {...frist_card} t={t}/>
+          <Card
+            name="Базовый"
+            price="5"
+            perprice="$2.6/ГБ"
+            currency="USD"
+            features={[
+              "Выбор страны/города",
+              "Выбор провайдера",
+              "24/7 поддержка",
+              "Этические IP-адрес",
+            ]}
+            button="ПОДПИСАТЬСЯ"
+            button_color="black_btn"
+            t={t}
+          />
         </div>
       </div>
     </>
