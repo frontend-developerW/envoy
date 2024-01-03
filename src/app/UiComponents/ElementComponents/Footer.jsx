@@ -6,12 +6,12 @@ function Footer({ t }) {
     <div className="grid md:grid-cols-[2fr,2fr,1fr,2fr]">
       <div className="flex flex-col gap-[15px] justify-start">
         <Link href="/residental">{t["create_tarif_1"]}</Link>
-        <Link href="/monitoring">{t["create_tarif_2"]}</Link>
-        <Link href="/">{t["create_tarif_3"]}</Link>
+        <Link href="/resident-static">{t["create_tarif_2"]}</Link>
+        <Link href="/mobile-proxy">{t["create_tarif_3"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
         <Link href="#">{t["proxy_usage"]}</Link>
-        <Link href="/countries">{t["countries"]}</Link>
+        <Link href="/proxy-countries">{t["countries"]}</Link>
         <Link href="/tarif_plans">{t["prices"]}</Link>
         <Link href="/help">{t["help"]}</Link>
         <Link href="/blog">{t["blog"]}</Link>

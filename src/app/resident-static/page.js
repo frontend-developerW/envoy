@@ -18,28 +18,28 @@ import ResidentProxy from '../UiComponents/ResidentProxy'
 import DynamicBanner from '../UiComponents/DynamicBanner'
 
 const Residental = () => {
-  const t = useSelector((state) => state.counter.value)
-  
-  return (
-    <div className='container'>
-      <main>
-        <Navbar t={t} />
-        <DynamicBanner t={t} />
-        <ResidentProxy t={t} />
-        <Tariffs t={t} />
-        <Competition t={t} />
-        <GlobalProxy t={t} />
-        <PopularVariants t={t} />
-        <Feedback t={t} />
-        <HowToUse t={t} />
-        <PaymentType t={t} />
-        <Refferal t={t} />
-        <Faq t={t} />
-        <Contact t={t} />
-        <Footer t={t} />
-      </main>
-    </div>
-  )
+    const t = useSelector((state) => state.counter.value)
+
+    return (
+        <div className='container'>
+            <main>
+                <Navbar t={t} />
+                <DynamicBanner t={t} />
+                <ResidentProxy t={t} />
+                <Tariffs t={t} />
+                <Competition t={t} />
+                <GlobalProxy t={t} />
+                <PopularVariants t={t} />
+                <Feedback t={t} />
+                <HowToUse t={t} />
+                <PaymentType t={t} />
+                <Refferal t={t} />
+                <Faq t={t} />
+                <Contact t={t} />
+                <Footer t={t} />
+            </main>
+        </div>
+    )
 }
 
 export default Residental
