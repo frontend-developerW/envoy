@@ -19,7 +19,7 @@ function Card({
           {description}
         </p>
       )}
-      <p className="type_tariff md:text-xl text-x font-bold text-blue-500 uppercase">
+      <p className="type_tariff md:text-xl text-x font-bold text-blue-500 uppercase pt-3">
         Starter
       </p>
       <h1 className="price_tariff md:text-[50px] text-[40px] font-bold mt-2">

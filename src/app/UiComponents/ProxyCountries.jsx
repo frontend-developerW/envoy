@@ -19,14 +19,14 @@ function ProxyCountries({ t }) {
         <div className="flex flex-col">
           <h1 className="font-bold"> {t["north_america"]}</h1>
           {countries[0][currentLocale].map((item, index) => (
-            <Link href={`proxy-countries/${item}`} key={index}>
+            <Link href={`/country?pid=${item}`} key={index}>
               {item}
             </Link>
           ))}
           <br />
           <h1 className="font-bold"> {t["south_america"]}</h1>
           {countries[1][currentLocale].map((item, index) => (
-            <Link href={`proxy-countries/${item}`} key={index}>
+            <Link href={`/country?pid=${item}`} key={index}>
               {item}
             </Link>
           ))}
@@ -34,7 +34,7 @@ function ProxyCountries({ t }) {
         <div className="flex flex-col">
           <h1 className="font-bold"> {t["europe"]}</h1>
           {countries[2][currentLocale].map((item, index) => (
-            <Link href={`proxy-countries/${item}`} key={index}>
+            <Link href={`/country?pid=${item}`} key={index}>
               {item}
             </Link>
           ))}
@@ -42,7 +42,7 @@ function ProxyCountries({ t }) {
         <div className="flex flex-col">
           <h1 className="font-bold"> {t["asia"]}</h1>
           {countries[3][currentLocale].map((item, index) => (
-            <Link href={`proxy-countries/${item}`} key={index}>
+            <Link href={`/country?pid=${item}`} key={index}>
               {item}
             </Link>
           ))}
