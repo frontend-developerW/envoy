@@ -1,13 +1,22 @@
+import Link from "next/link";
 import React from "react";
-
-function Feedback({t}) { 
+import { FaArrowRight } from "react-icons/fa6";
+function Feedback({ t, allComments = false }) {
+  let arr = allComments ? [1, 2, 3, 4, 5, 6] : [1, 2, 3];
   return (
     <div>
-      <h1 className="title_section text-3xl font-bold mt-[100px] mb-[50px]">
-        {t['feedback']}
-      </h1>
+      <div className="flex items-center justify-between  font-bold mt-[100px] mb-[50px]">
+        <h1 className="title_section text-3xl">{t["feedback"]}</h1>
+        {!allComments && (
+          <Link href="/all-comments">
+            <button className="text-[18px] flex items-center gap-5">
+              {t.all_comments} <FaArrowRight />
+            </button>
+          </Link>
+        )}
+      </div>
       <div className="grid md:grid-cols-3 gap-[30px]">
-        {[1, 2, 3].map((item, index) => (
+        {arr.map((item, index) => (
           <div
             key={index}
             className="card p-[40px] pb-[80px] rounded-[12px] border-solid border border-[#E7E8EC] bg-white"

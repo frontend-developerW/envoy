@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer({ t }) {
   return (
-    <div className="grid md:grid-cols-[2fr,2fr,1fr,2fr]">
+    <div className="grid md:grid-cols-3">
       <div className="flex flex-col gap-[15px] justify-start">
         <Link href="/residental">{t["create_tarif_1"]}</Link>
         <Link href="/resident-static">{t["create_tarif_2"]}</Link>
@@ -13,13 +13,10 @@ function Footer({ t }) {
         <Link href="#">{t["proxy_usage"]}</Link>
         <Link href="/proxy-countries">{t["countries"]}</Link>
         <Link href="/tarif_plans">{t["prices"]}</Link>
+        <Link href="/blog">{t["helpful"]}</Link>
         <Link href="/help">{t["help"]}</Link>
         <Link href="/blog">{t["blog"]}</Link>
-        <Link href="#">{t["refferal_title"]}</Link>
-      </div>
-      <div className="flex flex-col gap-[15px] justify-start">
-        <Link href="/">{t["chatbot"]}</Link>
-        <Link href="/contact">{t["feedback_contact"]}</Link>
+        <Link href="/refferal">{t["refferal_title"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
         <Link href="#">{t["social"]}</Link>
@@ -31,10 +28,13 @@ function Footer({ t }) {
             <img src="/youtube.svg" className="h-[30px]" alt="" />
           </Link>
           <Link href="#">
-            <img src="/vk.svg" className="h-[30px]" alt="" />
+            <img src="/4star.svg" className="h-[30px]" alt="" />
           </Link>
           <Link href="#">
-            <img src="/4star.svg" className="h-[30px]" alt="" />
+            <img src="/linkedin.svg" className="h-[30px]" alt="" />
+          </Link>
+          <Link href="#">
+            <img src="/twit.svg" className="h-[30px]" alt="" />
           </Link>
         </div>
         <Link href="/privacy">{t["policy"]}</Link>

@@ -24,8 +24,8 @@ export const en = {
   create_tarif_title: "Create your unique plan considering your own preferences",
   create_tarif: "Create tarif",
   create_tarif_1: "Dynamic residential proxies ",
-  create_tarif_2: "Residential statistic proxies ",
-  create_tarif_3: "Residential mobile proxies ",
+  create_tarif_2: "Statistic proxies ",
+  create_tarif_3: "Mobile proxies ",
   range_title: "Choose traffic's volume",
   gb: "GB",
   partner_text: "Refer friends and colleagues to our community and benefit from our referral program! Everyone you invite will thank you by having an access to our proxy servers, while you will get special bonuses and rewards.",
@@ -174,5 +174,9 @@ export const en = {
   south_america: "South America",
   europe: "Europe",
   asia: "Asia and the Middle East",
-  more1500: "More than 15000 clients around the world put there trust in us."
+  howcan: "How can we help you?",
+  more1500: "More than 15000 clients around the world put there trust in us.",
+  search: "Search",
+  all_comments: "All comments",
+  all_cases: "All cases",
 }

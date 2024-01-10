@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Card from "./ElementComponents/Card";
 import { tariff_cards } from "./components/constatns.js";
 import RangeInput from "./ElementComponents/InputRange";
+import Link from "next/link";
 
 function Tariff_cards({ t }) {
   // const frist_card = tariff_cards[1];
@@ -30,7 +31,9 @@ function Tariff_cards({ t }) {
           <p className="text-[28px] mb-[30px] w-[80%]">
             {t["create_tarif_title"]}
           </p>
-          <button className="outliners mt-4">{t["create_tarif"]}</button>
+          <Link href={'/register'}>
+            <button className="outliners mt-4">{t["create_tarif"]}</button>
+          </Link>
         </div>
         <div className="flex flex-col p-4 gap-[20px] py-8">
           <button className="outliners text-[14px]">

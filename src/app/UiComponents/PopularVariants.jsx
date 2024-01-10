@@ -1,11 +1,21 @@
 import React from "react";
 import { popular_usage } from "./components/constatns.js";
 import Link from "next/link.js";
+import { FaArrowRight } from "react-icons/fa6";
 
-function PopularVariants({ t }) {
+function PopularVariants({ t, allVariants = false }) {
   return (
     <div className="popular_variants">
-      <h1 className="text-3xl font-bold mb-[50px]">{t["popular_variant"]}</h1>
+      <div className="flex items-center justify-between  font-bold mt-[100px] mb-[50px]">
+        <h1 className="title _section text-3xl">{t["popular_variant"]}</h1>
+        {!allVariants && (
+          <Link href="/use-cases">
+            <button className="text-[18px] flex items-center gap-5">
+              {t.all_cases} <FaArrowRight />
+            </button>
+          </Link>
+        )}
+      </div>
       <div className="grid_popular grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[30px]">
         {popular_usage.map((item, index) => (
           <Link

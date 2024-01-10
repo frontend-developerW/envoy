@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-
-import { toRus, toEng } from "../../app/action/counterSlice";
+import SwitchLang from "./SwitchLang";
 
 function Navbar({ t }) {
   const [activeNav, setActiveNav] = useState(false);
-  const dispatch = useDispatch();
-  const currentLocale = useSelector((state) => state.counter.lang);
 
   return (
     <div className="pb-[70px]">
@@ -46,9 +42,7 @@ function Navbar({ t }) {
             </li>
             <li>
               <div className="dropdown">
-                <button className="dropdown-button">
-                  {t["residential"]}
-                </button>
+                <button className="dropdown-button">{t["residential"]}</button>
                 <div className="dropdown-content">
                   <Link href="/residental">{t["create_tarif_1"]}</Link>
                   <Link href="/resident-static">{t["create_tarif_2"]}</Link>
@@ -70,31 +64,7 @@ function Navbar({ t }) {
             </li>
             <li className="flex flex-col gap-[10px] text-[20px]">
               {/* <LanguageChanger /> */}
-              {/* <div class="dropdown">
-                <button
-                  className="dropdown-button"
-                  onClick={() => dispatch(toRus())}
-                >
-                  <img src="/ru.png" alt="" />
-                </button>
-                <div class="dropdown-content">
-                  <button onClick={() => dispatch(toEng())}>
-                    <img src="/en.png" alt="" />
-                  </button>
-                </div>
-              </div> */}
-              {currentLocale === "ru" ? (
-                <button onClick={() => dispatch(toEng())}>
-                  <img className="w-[25px] rounded-full" src="/en.png" alt="" />
-                </button>
-              ) : (
-                <button
-                  className="dropdown-button"
-                  onClick={() => dispatch(toRus())}
-                >
-                  <img className="w-[25px] rounded-full" src="/ru.png" alt="" />
-                </button>
-              )}
+              <SwitchLang />
             </li>
             <li className="md:block hidden">
               <Link href="/login" className="text-black ">

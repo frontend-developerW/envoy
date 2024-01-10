@@ -2,7 +2,7 @@ import { clients_logo } from "./components/constatns.js";
 
 function RighOfLogin({ t, type }) {
   return (
-    <div className="p-[50px] w-full md:flex hidden flex-col justify-between ">
+    <div className="p-[40px] w-full md:flex hidden flex-col justify-between ">
       <div className="flex justify-between w-full">
         <h1 className="w-[50%] text-[32px] font-[600]">{t[type]}</h1>
         <div className="flex flex-col items-end">
