@@ -1,10 +1,6 @@
 // components/RangeInput.js
-"use client"
-
-import { useState } from "react";
-const RangeInput = ({gb}) => {
-  const [value, setValue] = useState(50); // Initial value
-
+"use client";
+const RangeInput = ({ gb, value, setValue }) => {
   const handleInputChange = (e) => {
     const newValue = parseInt(e.target.value, 10);
     setValue(newValue);
@@ -12,7 +8,9 @@ const RangeInput = ({gb}) => {
 
   return (
     <div className="outliners input_range">
-      <p>{value}-{gb}</p>
+      <p>
+        {value}-{gb}
+      </p>
       <input
         type="range"
         min={0}

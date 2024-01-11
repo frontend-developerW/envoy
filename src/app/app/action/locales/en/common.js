@@ -181,4 +181,7 @@ export const en = {
   all_cases: "All cases",
   products: "Products",
   info: "Info",
+  not_found: "Page not found",
+  not_found_text: "Sorry, the page you visited does not exist.",
+  home: "Home",
 }
