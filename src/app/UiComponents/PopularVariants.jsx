@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 function PopularVariants({ t, allVariants = false }) {
   return (
     <div className="popular_variants">
-      <div className="flex items-center justify-between  font-bold mt-[100px] mb-[50px]">
+      <div className="flex md:items-center md:justify-between  font-bold mt-[100px] mb-[50px] md:flex-row flex-col  md:gap-0 gap-4">
         <h1 className="title _section text-3xl">{t["popular_variant"]}</h1>
         {!allVariants && (
           <Link href="/use-cases">

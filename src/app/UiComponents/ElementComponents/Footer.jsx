@@ -5,12 +5,14 @@ function Footer({ t }) {
   return (
     <div className="grid md:grid-cols-3">
       <div className="flex flex-col gap-[15px] justify-start">
+        <b className="font-semibol">{t["products"]}</b>
         <Link href="/residental">{t["create_tarif_1"]}</Link>
         <Link href="/resident-static">{t["create_tarif_2"]}</Link>
         <Link href="/mobile-proxy">{t["create_tarif_3"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
-        <Link href="#">{t["proxy_usage"]}</Link>
+        <b className="font-semibol">{t["info"]}</b>
+        <Link href="/use-cases">{t["proxy_usage"]}</Link>
         <Link href="/proxy-countries">{t["countries"]}</Link>
         <Link href="/tarif_plans">{t["prices"]}</Link>
         <Link href="/blog">{t["helpful"]}</Link>
@@ -19,7 +21,7 @@ function Footer({ t }) {
         <Link href="/refferal">{t["refferal_title"]}</Link>
       </div>
       <div className="flex flex-col gap-[15px] justify-start">
-        <Link href="#">{t["social"]}</Link>
+      <b className="font-semibol">{t["social"]}</b>
         <div className="flex items-center gap-[10px]">
           <Link href="#">
             <img src="/telegram.svg" className="h-[30px]" alt="" />

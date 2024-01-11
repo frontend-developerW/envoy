@@ -18,7 +18,7 @@ function GlobalProxy({ t }) {
       <div className="create_map grid md:grid-cols-3 md:gap-4 gap-8 p-8 py-16">
         {globalCn.map((item, index) => (
           <div className="proxy_item flex items-center gap-2" key={index}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="" className="w-[47px]"/>
             <div className="column">
               <p className="text-sm">{item.name}</p>
               <b className="text-sm">{item.sub}</b>
@@ -26,7 +26,7 @@ function GlobalProxy({ t }) {
           </div>
         ))}
         <div className="proxy_item flex items-center gap-2">
-          <img src={"/world.svg"} alt="" />
+          <img src={"/world.svg"} alt="" className="w-[47px]"/>
           <div className="column">
             <p className="text-sm">+ 190 {t["countries"]}</p>
             <Link href="/proxy-countries" className="text-sm">

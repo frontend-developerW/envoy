@@ -179,5 +179,7 @@ export const ru = {
   howcan: "Чем мы можем вам помочь?",
   search: "Поиск",
   all_comments: "Все отзывы",
-  all_cases: "Все варианты использования"
+  all_cases: "Все варианты использования",
+  products: "Продукты",
+  info: "Инфо",
 }

@@ -36,7 +36,7 @@ const Register = () => {
               <p className='text-[#828A9E] mb-[10px]'> {t['with_account']}
                 <Link href="/login" className='mt-[10px] underline text-[#038FF7]'>{t['login']} </Link>
               </p>
-              <p className='text-[#828A9E] text-[12px]'>{t['agree_policy']} <br /> <a href="#" className='mt-[10px] underline text-[#038FF7]'> {t['p_p']}   </a></p>
+              <p className='text-[#828A9E] text-[12px]'>{t['agree_policy']} <br /> <Link href="/privacy" className='mt-[10px] underline text-[#038FF7]'> {t['p_p']}   </Link></p>
 
             </div>
           </div>

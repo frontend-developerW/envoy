@@ -179,4 +179,6 @@ export const en = {
   search: "Search",
   all_comments: "All comments",
   all_cases: "All cases",
+  products: "Products",
+  info: "Info",
 }

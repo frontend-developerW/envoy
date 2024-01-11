@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import SwitchLang from "./SwitchLang";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Navbar({ t }) {
   const [activeNav, setActiveNav] = useState(false);
@@ -42,7 +43,7 @@ function Navbar({ t }) {
             </li>
             <li>
               <div className="dropdown">
-                <button className="dropdown-button">{t["residential"]}</button>
+                <button className="dropdown-button flex items-center gap-2">{t["residential"]} <IoIosArrowDown /></button>
                 <div className="dropdown-content">
                   <Link href="/residental">{t["create_tarif_1"]}</Link>
                   <Link href="/resident-static">{t["create_tarif_2"]}</Link>

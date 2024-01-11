@@ -35,14 +35,14 @@ function Tariff_cards({ t }) {
             <button className="outliners mt-4">{t["create_tarif"]}</button>
           </Link>
         </div>
-        <div className="flex flex-col p-4 gap-[20px] py-8">
-          <button className="outliners text-[14px]">
+        <div className="flex flex-col p-4 gap-[20px] py-8 md:items-stretch items-center">
+          <button className="outliners text-[14px] w-full">
             {t["create_tarif_1"]}
           </button>
-          <button className="outliners text-[14px]">
+          <button className="outliners text-[14px] w-full">
             {t["create_tarif_2"]}
           </button>
-          <button className="outliners text-[14px]">
+          <button className="outliners text-[14px] w-full">
             {t["create_tarif_3"]}
           </button>
           <p className="text-[16px] md:uppercase font-[600]">

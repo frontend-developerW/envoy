@@ -5,7 +5,7 @@ function Feedback({ t, allComments = false }) {
   let arr = allComments ? [1, 2, 3, 4, 5, 6] : [1, 2, 3];
   return (
     <div>
-      <div className="flex items-center justify-between  font-bold mt-[100px] mb-[50px]">
+      <div className="flex md:items-center md:justify-between  font-bold mt-[100px] mb-[50px] md:flex-row flex-col md:gap-0 gap-4">
         <h1 className="title_section text-3xl">{t["feedback"]}</h1>
         {!allComments && (
           <Link href="/all-comments">

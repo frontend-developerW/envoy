@@ -17,7 +17,7 @@ function SwitchLang() {
         </button>
       ) : (
         <button className="flex items-center gap-2" onClick={() => setLangDrop(true)}>
-          <img className="w-[25px] rounded-full" src="/en.png" alt="" />
+          <img className="w-[25px] rounded-full" src="/us.png" alt="" />
           <IoIosArrowDown />
         </button>
       )}
@@ -30,7 +30,7 @@ function SwitchLang() {
                 setLangDrop(false);
               }}
             >
-              <img className="w-[25px] rounded-full" src="/en.png" alt="" />
+              <img className="w-[25px] rounded-full" src="/us.png" alt="" />
             </button>
           ) : (
             <button
