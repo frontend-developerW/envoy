@@ -1,15 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./ElementComponents/Card";
 import { tariff_cards } from "./components/constatns.js";
 import RangeInput from "./ElementComponents/InputRange";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 function Tariff_cards({ t }) {
   // const frist_card = tariff_cards[1];
   const [active, setActive] = useState(0);
   const [rangeValue, setRangeValue] = useState(25);
   const [tabValues, setTabValues] = useState(0);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname === "/resident-static/") {
+      setActive(1);
+    } else if (pathname === "/mobile-proxy/") {
+      setActive(2);
+    }else{
+      setActive(0);
+    }
+  }, []);
+
   const tabs = [
     {
       id: 0,
@@ -27,6 +39,7 @@ function Tariff_cards({ t }) {
       value: 5,
     },
   ];
+
   return (
     <>
       <div className="grid md:grid-cols-3 p-2 bg-[#F2F4F6] md:w-[60%] w-[80%] m-[auto] my-[70px] gap-2">

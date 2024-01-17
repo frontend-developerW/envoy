@@ -1,5 +1,4 @@
 import { clients_logo } from "./components/constatns.js";
-
 function RighOfLogin({ t, type }) {
   return (
     <div className="p-[40px] w-full md:flex hidden flex-col justify-between ">

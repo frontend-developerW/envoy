@@ -11,36 +11,43 @@ function SwitchLang() {
   return (
     <div className="relative">
       {currentLocale === "ru" ? (
-        <button className="flex items-center gap-2" onClick={() => setLangDrop(true)}>
-          <img className="w-[25px] rounded-full" src="/ru.png" alt="" />
+        <button
+          className="flex items-center gap-2"
+          onClick={() => setLangDrop(!langDrop)}
+        >
+          <img className="w-[25px] rounded-full" src="/ru.png" alt="" /> Рус
           <IoIosArrowDown />
         </button>
       ) : (
-        <button className="flex items-center gap-2" onClick={() => setLangDrop(true)}>
-          <img className="w-[25px] rounded-full" src="/us.png" alt="" />
+        <button
+          className="flex items-center gap-2"
+          onClick={() => setLangDrop(!langDrop)}
+        >
+          <img className="w-[25px] rounded-full" src="/us.png" alt="" /> Eng
           <IoIosArrowDown />
         </button>
       )}
       {langDrop && (
-        <div className="absolute top-[30px]">
+        <div className="absolute top-[40px]">
           {currentLocale === "ru" ? (
             <button
+              className="flex gap-2"
               onClick={() => {
                 dispatch(toEng());
                 setLangDrop(false);
               }}
             >
-              <img className="w-[25px] rounded-full" src="/us.png" alt="" />
+              <img className="w-[25px] rounded-full" src="/us.png" alt="" /> Eng
             </button>
           ) : (
             <button
-              className="dropdown-button"
+              className="flex gap-2"
               onClick={() => {
                 dispatch(toRus());
                 setLangDrop(false);
               }}
             >
-              <img className="w-[25px] rounded-full" src="/ru.png" alt="" />
+              <img className="w-[25px] rounded-full" src="/ru.png" alt="" /> Рус
             </button>
           )}
         </div>

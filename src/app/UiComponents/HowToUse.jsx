@@ -1,13 +1,21 @@
 import Link from "next/link";
 import React from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 function HowToUse({ t }) {
   return (
     <div>
-      <h1 className="text-[32px] font-bold my-12 mt-[100px] flex items-center gap-[10px]">
-        <img src="/folder.svg" alt="" className="md:block hidden" />
-        {t["how_use_clients"]}
-      </h1>
+      <div className="flex md:flex-row flex-col justify-between md:items-center  font-bold my-12 mt-[100px]">
+        <h1 className="text-[32px] flex items-center gap-[10px]">
+          <img src="/folder.svg" alt="" className="md:block hidden" />
+          {t["how_use_clients"]}
+        </h1>
+        <Link href="/blog">
+          <button className="text-[18px] flex items-center gap-5">
+            {t.all_articles} <FaArrowRight />
+          </button>
+        </Link>
+      </div>
       <div className="grid md:grid-cols-5 grid-cols-2 items-center gap-[16px]">
         {[1, 2, 3, 4, 5].map((item, index) => (
           <Link
@@ -17,7 +25,7 @@ function HowToUse({ t }) {
           >
             <iframe
               className="w-[100%] h-[141px]"
-              src="https://www.youtube.com/embed/-rl0B0r3urk?si=VD7rk6Xy2FF2f3fO"
+              src="https://www.youtube.com/embed/j9-Y0KWVJ1k?si=sMXpK4bq3v6kFbHq"
               title="YouTube video player"
               frameBorder={0}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

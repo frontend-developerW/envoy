@@ -14,7 +14,7 @@ const BlogItem = () => {
           {t['how_use_clients']}
         </h1>
         <div className="p-[20px]">
-          <iframe className='w-full md:h-[820px] rounded-[30px] overflow-hidden' src="https://www.youtube.com/embed/ysNDDrG9PtI?si=Cd5RU1evS_bob7Mu" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <iframe className='w-full md:h-[820px] rounded-[30px] overflow-hidden' src="https://www.youtube.com/embed/j9-Y0KWVJ1k?si=sMXpK4bq3v6kFbHq" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         </div>
         <div className="bg-white p-10 rounded-[20px] m-[20px]">
           <h1 className='text-[22px] font-[600]'>Lorem ipsum dolor sit amet, consectetuer adip Blog Post </h1>

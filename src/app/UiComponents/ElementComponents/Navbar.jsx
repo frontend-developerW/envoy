@@ -3,12 +3,16 @@ import Link from "next/link";
 import React, { useState } from "react";
 import SwitchLang from "./SwitchLang";
 import { IoIosArrowDown } from "react-icons/io";
+import Head from "next/head";
 
 function Navbar({ t }) {
   const [activeNav, setActiveNav] = useState(false);
 
   return (
     <div className="pb-[70px]">
+      <Head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+      </Head>
       <div className="fixed top-0 left-0 w-full md:p-[30px] md:py-[20px] py-[0px] z-[99] bg-[#F3F7FE]">
         <nav className="container">
           <div className="md:hidden flex items-center justify-between p-[20px_0px]">
@@ -38,12 +42,15 @@ function Navbar({ t }) {
             </li>
             <li>
               <Link href="/">
-                <h1 className="text-2xl font-bold">Primesox</h1>
+                {/* <h1 className="text-2xl font-bold">Primesox</h1> */}
+                <img src="/nav_logo.svg" alt="" className="w-[150px]" />
               </Link>
             </li>
             <li>
               <div className="dropdown">
-                <button className="dropdown-button flex items-center gap-2">{t["residential"]} <IoIosArrowDown /></button>
+                <button className="dropdown-button flex items-center gap-2">
+                  {t["residential"]} <IoIosArrowDown />
+                </button>
                 <div className="dropdown-content">
                   <Link href="/residental">{t["create_tarif_1"]}</Link>
                   <Link href="/resident-static">{t["create_tarif_2"]}</Link>

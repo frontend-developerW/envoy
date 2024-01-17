@@ -4,7 +4,7 @@ import Navbar from './UiComponents/ElementComponents/Navbar'
 import { useSelector } from 'react-redux'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Link from 'next/link';
-function notfound() {
+function NotFound() {
   const t = useSelector((state) => state.counter.value)
 
   return (
@@ -37,4 +37,4 @@ function notfound() {
   )
 }
 
-export default notfound
+export default NotFound
